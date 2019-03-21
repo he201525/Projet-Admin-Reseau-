@@ -6,6 +6,8 @@ RUN apt-get install -y bind9
 RUN apt-get install -y dnsutils
 RUN apt-get install -y vim 
 
+ADD 
+
 WORKDIR /etc/bind
 
 VOLUME /etc/bind
