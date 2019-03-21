@@ -17,6 +17,6 @@ ENV APACHE_PID_FILE /var/run/apache2.pid
 
 EXPOSE 80
 
-ADD /etc/apache2/
+ADD https://github.com/he201525/Projet-Admin-Reseau-/tree/master/WEB /etc/apache2/
 
 CMD ["apache2ctl", "-D", "FOREGROUND"]]
