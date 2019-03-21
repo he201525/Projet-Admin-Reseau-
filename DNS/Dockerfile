@@ -8,7 +8,7 @@ RUN apt-get install -y dnsutils
 
 WORKDIR /etc/bind
 
-COPY ./named.conf ./named.conf
+COPY https://github.com/he201525/Projet-Admin-Reseau-/blob/master/DNS/ /etc/bind/
 COPY ./named.conf.options ./named.conf.options
 COPY ./named.conf.local ./named.conf.local
 COPY ./named.conf.default-zones ./named.conf.default-zones
