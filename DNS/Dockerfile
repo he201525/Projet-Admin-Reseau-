@@ -13,6 +13,6 @@ WORKDIR /etc/bind
 
 VOLUME /etc/bind
 
-EXPOSE 53 53/udp
+EXPOSE 53/udp 53/tcp
 
 CMD ["/usr/sbin/named", "-g", "-c", "/etc/bind/named.conf", "-u", "bind"]
