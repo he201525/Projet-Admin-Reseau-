@@ -10,6 +10,7 @@ ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/DNS/c
 ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/DNS/config/named.conf.local /etc/bind/named.conf.local
 ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/DNS/config/named.conf.options /etc/bind/named.conf.options
 ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/DNS/config/named.conf.default-zones /etc/bind/named.conf.default-zones
+ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/DNS/config/named.conf /etc/bind/named.conf
 
 WORKDIR /etc/bind
 
