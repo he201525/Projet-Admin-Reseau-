@@ -8,6 +8,7 @@ RUN apt-get install -y vim
 
 ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/DNS/config/db.wt18.ephec-ti.be /etc/bind/db.wt18.ephec-ti.be
 ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/DNS/config/named.conf.local /etc/bind/named.conf.local
+ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/DNS/config/named.conf.options /etc/bind/named.conf.options
 
 WORKDIR /etc/bind
 
