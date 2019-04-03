@@ -20,7 +20,7 @@ ENV APACHE_PID_FILE /var/run/apache2.pid
 
 EXPOSE 80
 
-ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/Config/apache-config.conf /etc/apache2/apache-config.conf
+ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/Config/apache-config.conf /etc/apache2/site-available/apache-config.conf
 ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/www/index.html /etc/apache2/www/
 ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/intranet/index.html /etc/apache2/intranet/
 ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/b2b/index.html /etc/apache2/b2b/
