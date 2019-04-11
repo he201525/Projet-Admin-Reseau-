@@ -1,7 +1,5 @@
 FROM ubuntu:latest
 
-MAINTAINER he201632@students.ephec.be
-
 RUN apt-get update
 RUN apt-get -y upgrade
 RUN apt-get install -y apt-utils
