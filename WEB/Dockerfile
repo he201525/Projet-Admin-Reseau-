@@ -1,7 +1,11 @@
 FROM ubuntu:latest
 
-RUN apt-get update && apt-get -y upgrade && DEBIAN_FRONTEND=noninteractive apt-get -y install \
-apache2 php7.0 php7.0-mysql libapache2-mod-php7.0 curl lynx-cur
+RUN apt-get update
+RUN apt-get -y upgrade
+RUN apt-get install -y apt-utils
+RUN apt-get install -y apache2
+RUN apt-get install -y php7.0 
+RUN apt-get install -y php7.0-mysql
 
 RUN a2enmod php7.0
 RUN a2enmod rewrite
