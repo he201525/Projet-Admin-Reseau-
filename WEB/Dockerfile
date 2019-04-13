@@ -14,8 +14,8 @@ RUN a2ensite apache-config.conf
 EXPOSE 80 443
 
 COPY https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/Config/apache-config.conf /etc/apache2/site-available/apache-config.conf
-COPY https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/www/index.html /var/www/www/index.html
-COPY https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/intranet/index.html /var/www/intranet/index.html
-COPY https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/b2b/index.html /var/www/b2b/index.html
+COPY https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/www/index.html /var/www/www
+COPY https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/intranet/index.html /var/www/intranet
+COPY https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/b2b/index.html /var/www/b2b
 
 CMD ["apache2ctl", "-D", "FOREGROUND"]]
