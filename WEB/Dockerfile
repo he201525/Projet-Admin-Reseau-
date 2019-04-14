@@ -1,7 +1,7 @@
 FROM ubuntu:latest
 
 RUN apt-get update
-RUN apt-get -y upgrade
+RUN apt-get -y upgrade  && DEBIAN_FRONTEND=noninteractive
 RUN apt-get install -y apt-utils
 RUN apt-get install -y apache2
 RUN apt-get install -y php7.0 
