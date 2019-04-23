@@ -13,15 +13,15 @@ COPY https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/
 COPY https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/intranet/intranet.conf /etc/apache2/site-available/intranet.conf
 COPY https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/www/www.conf /etc/apache2/site-available/www.conf
 
-COPY ./b2B/html /var/www/b2b/site
-COPY ./intranet/site /var/www/intranet/site
-COPY ./showcase/site /var/www/default/site
+COPY https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/b2b/site/index.php /var/www/b2b/site/index.php
+COPY https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/intranet/site/index.html /var/www/intranet/site/index.html
+COPY https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/b2b/www/index.html /var/www/default/site/index.html
 
 RUN a2enmod php7.0
 RUN a2enmod rewrite
 
 RUN a2ensite b2B.conf
 RUN a2ensite intranet.conf
-RUN a2ensite showcase.conf
+RUN a2ensite www.conf
 
 CMD ["apache2ctl", "-D", "FOREGROUND"]]
