@@ -15,7 +15,7 @@ COPY https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/
 
 COPY https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/b2b/site/index.php /var/www/b2b/site/index.php
 COPY https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/intranet/site/index.html /var/www/intranet/site/index.html
-COPY https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/b2b/www/index.html /var/www/www/site/index.html
+COPY https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/www/site/index.html /var/www/www/site/index.html
 
 RUN a2enmod php7.0
 RUN a2enmod rewrite
