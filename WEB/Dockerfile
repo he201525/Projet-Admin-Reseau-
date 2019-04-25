@@ -1,7 +1,12 @@
 FROM ubuntu:latest
 
 RUN apt-get update && apt-get -y upgrade && DEBIAN_FRONTEND=noninteractive 
-RUN apt-get -y install apache2 php7.0 php7.0-mysql libapache2-mod-php7.0 curl lynx-cur
+RUN apt-get install -y apache2 
+RUN apt-get install -y php7.0 
+RUN apt-get install -y php7.0-mysql 
+RUN apt-get install -y libapache2-mod-php7.0 
+RUN apt-get install -y curl 
+RUN apt-get install -y lynx-cur
 
 EXPOSE 80 443
 
