@@ -1,6 +1,8 @@
 FROM ubuntu:latest
 
-RUN apt-get update && apt-get -y upgrade && DEBIAN_FRONTEND=noninteractive 
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && apt-get -y upgrade 
 RUN apt-get install -y apache2 
 RUN apt-get install -y php7.0 
 RUN apt-get install -y php7.0-mysql 
