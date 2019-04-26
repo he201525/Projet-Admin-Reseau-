@@ -8,7 +8,6 @@ RUN apt-get install -y php7.0
 RUN apt-get install -y php-mysql 
 RUN apt-get install -y libapache2-mod-php
 RUN apt-get install -y curl 
-RUN apt-get install -y lynx-cur
 
 ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/b2b/b2b.conf /etc/apache2/site-available/b2B.conf
 ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/intranet/intranet.conf /etc/apache2/site-available/intranet.conf
