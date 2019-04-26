@@ -17,10 +17,6 @@ ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/b
 ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/intranet/site/index.html /var/www/intranet/site/index.html
 ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/www/site/index.html /var/www/www/site/index.html
 
-RUN a2ensite b2B.conf
-RUN a2ensite intranet.conf
-RUN a2ensite www.conf
-
 RUN a2enmod php7.0
 RUN a2enmod rewrite
 
