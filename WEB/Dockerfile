@@ -5,7 +5,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && apt-get -y upgrade 
 RUN apt-get install -y apache2 
 RUN apt-get install -y php7.0 
-RUN apt-get install -y php7.0-mysql 
+RUN apt-get install -y php-mysql 
 RUN apt-get install -y libapache2-mod-php7.0 
 RUN apt-get install -y curl 
 RUN apt-get install -y lynx-cur
