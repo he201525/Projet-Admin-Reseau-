@@ -20,10 +20,6 @@ ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/w
 RUN a2enmod php7.0
 RUN a2enmod rewrite
 
-RUN a2ensite b2B.conf
-RUN a2ensite intranet.conf
-RUN a2ensite www.con
-
 EXPOSE 80 443
 
 CMD ["apache2ctl", "-D", "FOREGROUND"]]
