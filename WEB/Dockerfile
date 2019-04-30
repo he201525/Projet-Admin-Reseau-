@@ -20,6 +20,10 @@ ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/w
 RUN a2enmod php7.0
 RUN a2enmod rewrite
 
+RUN ln -s /etc/apache2/sites-available/b2b.w18.ephec-ti.be.conf  /etc/apache2/sites-enabled/
+RUN ln -s /etc/apache2/sites-available/intranet.w18.ephec-ti.be.conf /etc/apache2/sites-enabled/
+RUN ln -s /etc/apache2/sites-available/www.w18.ephec-ti.be.conf /etc/apache2/sites-enabled/
+
 EXPOSE 80 443
 
 CMD ["apache2ctl", "-D", "FOREGROUND"]]
