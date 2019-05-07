@@ -1,5 +1,5 @@
 FROM ubuntu:latest
-MAINTAINER he201525@students.ephec.be
+MAINTAINER he201490@students.ephec.be
 
 RUN yum update -y
 RUN yum install -y epel-release
@@ -28,6 +28,7 @@ WORKDIR /tmp/asterisk
 
 # Configuration.
 RUN ./configure --libdir=/usr/lib64 1> /dev/null
+
 # Remove the native build option
 # from: https://wiki.asterisk.org/wiki/display/AST/Building+and+Installing+Asterisk
 RUN make menuselect.makeopts
@@ -50,10 +51,10 @@ RUN make samples 1> /dev/null
 RUN sed -i -e 's/# MAXFILES=/MAXFILES=/' /usr/sbin/safe_asterisk
 
 # Copie des fichiers de configuration dans le dossier approprie.
-ADD users.conf /etc/asterisk/users.conf
-ADD sip.conf /etc/asterisk/sip.conf
-ADD extensions.conf /etc/asterisk/extensions.conf
-ADD voicemail.conf /etc/asterisk/voicemail.conf
+ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/VoIP/config/users.conf /etc/asterisk/users.conf
+ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/VoIP/config/sip.conf /etc/asterisk/sip.conf
+ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/VoIP/config/extensions.conf /etc/asterisk/extensions.conf
+ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/VoIP/config/voicemail.conf /etc/asterisk/voicemail.conf
 
 EXPOSE 5060/udp
 EXPOSE 5060/tcp
