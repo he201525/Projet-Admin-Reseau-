@@ -5,7 +5,10 @@ wt18.ephec-ti.be.       IN      SOA     ns1.wt18.ephec-ti.be. he201490@students.
                           86400         ; Retry
                         2419200         ; Expire
                          604800 )       ; Negative Cache TTL
-;
+                         
+@                      IN      NS      ns
+                       IN      A       51.77.245.43
+                       
 wt18.ephec-ti.be.      IN      NS      ns1.wt18.ephec-ti.be.
 
 ns1.wt18.ephec-ti.be.      IN      A       51.77.245.43
