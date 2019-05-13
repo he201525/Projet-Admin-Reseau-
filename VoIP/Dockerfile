@@ -3,7 +3,7 @@ MAINTAINER he201490@students.ephec.be
 
 RUN apt-get -y update
 RUN apt-get -y upgrade
-RUN apt-get install -y git kernel-headers gcc gcc-c++ cpp ncurses ncurses-devel libxml2 libxml2-devel sqlite sqlite-devel openssl-devel newt-devel kernel-devel libuuid-devel net-snmp-devel xinetd tar jansson-devel make bzip2 gettext
+RUN apt-get install -y git kernel-headers gcc cpp libxml2 sqlite xinetd tar make bzip2 gettext
 
 WORKDIR /tmp
 # pjproject is needed to run asterisk 13
