@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:16.04
 MAINTAINER he201490@students.ephec.be
 
 RUN yum update -y
