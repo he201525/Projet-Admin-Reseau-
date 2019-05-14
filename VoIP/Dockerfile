@@ -25,7 +25,6 @@ RUN git clone -b certified/13.8 --depth 1 https://gerrit.asterisk.org/asterisk
 WORKDIR /tmp/asterisk
 
 # Continue with a standard make.
-RUN make 1> /dev/null
 RUN make install 1> /dev/null
 RUN make samples 1> /dev/null
 
