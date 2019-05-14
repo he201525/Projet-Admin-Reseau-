@@ -26,7 +26,6 @@ WORKDIR /tmp/asterisk
 
 # Remove the native build option
 # from: https://wiki.asterisk.org/wiki/display/AST/Building+and+Installing+Asterisk
-RUN make menuselect.makeopts
 RUN menuselect/menuselect \
   --disable BUILD_NATIVE \
   --enable cdr_csv \
