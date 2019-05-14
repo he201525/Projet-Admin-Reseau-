@@ -11,7 +11,7 @@ RUN git clone -b pjproject-2.4.5 --depth 1 https://github.com/asterisk/pjproject
 
 # Build the project
 WORKDIR /tmp/pjproject
-RUN ./configure --prefix=/usr --libdir=/usr/lib64 --enable-shared --disable-sound --disable-resample --disable-video --disable-opencore-amr 1> /dev/null
+RUN ./configure --prefix=/usr --enable-shared --disable-sound --disable-resample --disable-video --disable-opencore-amr 1> /dev/null
 RUN make dep 1> /dev/null
 
 # Reload cnfig
