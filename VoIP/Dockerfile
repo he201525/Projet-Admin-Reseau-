@@ -16,7 +16,6 @@ RUN make dep 1> /dev/null
 
 # Reload cnfig
 RUN ldconfig
-RUN ldconfig -p | grep pj
 
 ENV AUTOBUILD_UNIXTIME 123124
 WORKDIR /tmp
