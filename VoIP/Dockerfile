@@ -24,9 +24,6 @@ WORKDIR /tmp
 RUN git clone -b certified/13.8 --depth 1 https://gerrit.asterisk.org/asterisk
 WORKDIR /tmp/asterisk
 
-# Configuration.
-RUN ./configure --libdir=/usr/lib64 1> /dev/null
-
 # Remove the native build option
 # from: https://wiki.asterisk.org/wiki/display/AST/Building+and+Installing+Asterisk
 RUN make menuselect.makeopts
