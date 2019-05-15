@@ -24,9 +24,6 @@ WORKDIR /tmp
 RUN git clone -b certified/13.8 --depth 1 https://gerrit.asterisk.org/asterisk
 WORKDIR /tmp/asterisk
 
-# MaJ du nombre maximal de fichiers ouverts.
-RUN sed -i -e 's/# MAXFILES=/MAXFILES=/' /usr/sbin/safe_asterisk
-
 # Copie des fichiers de configuration dans le dossier approprie.
 ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/VoIP/config/users.conf /etc/asterisk/users.conf
 ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/VoIP/config/sip.conf /etc/asterisk/sip.conf
