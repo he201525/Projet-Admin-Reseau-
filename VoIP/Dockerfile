@@ -24,10 +24,6 @@ WORKDIR /tmp
 RUN git clone -b certified/13.8 --depth 1 https://gerrit.asterisk.org/asterisk
 WORKDIR /tmp/asterisk
 
-# Continue with a standard make.
-RUN make install 1> /dev/null
-RUN make samples 1> /dev/null
-
 # MaJ du nombre maximal de fichiers ouverts.
 RUN sed -i -e 's/# MAXFILES=/MAXFILES=/' /usr/sbin/safe_asterisk
 
