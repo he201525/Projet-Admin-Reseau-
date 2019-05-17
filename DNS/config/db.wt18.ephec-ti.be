@@ -1,4 +1,6 @@
 $TTL    604800
+
+$ORIGIN wt18.ephec-ti.be.
 @      IN      SOA     ns1.wt18.ephec-ti.be. root.wt18.ephec-ti.be. (
                               2         ; Serial
                          604800         ; Refresh
@@ -7,7 +9,7 @@ $TTL    604800
                          604800 )       ; Negative Cache TTL
 ;     
                        
-@                          IN      NS      ns1.wt18.ephec-ti.be.
+@         IN      NS      ns1.wt18.ephec-ti.be.
 ns1                        IN      A       51.77.245.43
 
 www.wt18.ephec-ti.be.      IN      A       51.77.245.43
