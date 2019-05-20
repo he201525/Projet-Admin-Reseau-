@@ -12,7 +12,7 @@ RUN apt-get install -y uuid-dev
 RUN apt-get install -y sqlite3
 RUN apt-get install -y libsqlite3-dev
 RUN apt-get install -y pkg-config
-RUN apt-get install -y libjansson-devÂ
+RUN apt-get install -y libjansson-dev
 RUN apt-get install -y vim
 
 RUN wget https://downloads.asterisk.org/pub/telephony/asterisk/asterisk-14.4.0.tar.gz
