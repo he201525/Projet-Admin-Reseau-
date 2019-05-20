@@ -15,8 +15,8 @@ RUN apt-get install -y pkg-config
 RUN apt-get install -y libjansson-dev
 RUN apt-get install -y vim
 
-RUN wget https://downloads.asterisk.org/pub/telephony/asterisk/asterisk-14.4.0.tar.gz
-RUN tar -xzf asterisk-14.4.0.tar.gz
+RUN http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-15-current.tar.gz
+RUN tar -xzvf asterisk-15-current.tar.gz
 WORKDIR /usr/local/src/asterisk-14.4.0
 
 RUN ./configure
