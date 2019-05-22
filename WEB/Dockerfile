@@ -9,9 +9,9 @@ RUN apt-get install -y php7.0-mysql
 RUN apt-get install -y libapache2-mod-php
 RUN apt-get install -y curl 
 
-ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/b2b/b2b.conf /etc/apache2/sites-available/b2B.conf
-ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/intranet/intranet.conf /etc/apache2/sites-available/intranet.conf
-ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/www/www.conf /etc/apache2/sites-available/www.conf
+ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/b2b/b2b.w18.ephec-ti.be.conf /etc/apache2/sites-available/b2b.w18.ephec-ti.be.conf
+ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/intranet/intranet.w18.ephec-ti.be.conf /etc/apache2/sites-available/intranet.w18.ephec-ti.be.conf
+ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/www/www.w18.ephec-ti.be.conf /etc/apache2/sites-available/www.w18.ephec-ti.be.conf
 
 ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/b2b/site/index.php /var/www/b2b/html/index.php
 ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/intranet/site/index.html /var/www/intranet/html/index.html
@@ -20,9 +20,9 @@ ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/w
 RUN a2enmod php7.0
 RUN a2enmod rewrite
 
-RUN ln -s /etc/apache2/sites-available/b2b.conf  /etc/apache2/sites-enabled/
-RUN ln -s /etc/apache2/sites-available/intranet.conf /etc/apache2/sites-enabled/
-RUN ln -s /etc/apache2/sites-available/www.conf /etc/apache2/sites-enabled/
+RUN ln -s /etc/apache2/sites-available/b2b.w18.ephec-ti.be.conf  /etc/apache2/sites-enabled/
+RUN ln -s /etc/apache2/sites-available/intranet.w18.ephec-ti.be.conf /etc/apache2/sites-enabled/
+RUN ln -s /etc/apache2/sites-available/www.w18.ephec-ti.be.conf /etc/apache2/sites-enabled/
 
 EXPOSE 80 443
 
