@@ -13,9 +13,9 @@ ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/b
 ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/intranet/intranet.w18.ephec-ti.be.conf /etc/apache2/sites-available/intranet.w18.ephec-ti.be.conf
 ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/www/www.w18.ephec-ti.be.conf /etc/apache2/sites-available/www.w18.ephec-ti.be.conf
 
-ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/b2b/site/index.php /var/www/b2b/html/index.php
-ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/intranet/site/index.html /var/www/intranet/html/index.html
-ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/www/site/index.html /var/www/www/html/index.html
+ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/b2b/site/index.php /var/www/b2b.w18.ephec-ti.be/index.php
+ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/intranet/site/index.html /var/www/intranet.w18.ephec-ti.be/index.html
+ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/www/site/index.html /var/www/www.w18.ephec-ti.be/index.html
 
 RUN a2enmod php7.0
 RUN a2enmod rewrite
