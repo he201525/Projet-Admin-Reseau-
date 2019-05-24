@@ -3,7 +3,7 @@ FROM ubuntu:latest
 RUN apt update && apt upgrade -y && DEBIAN_FRONTEND=noninteractive apt install -y apache2 php php-mysql vim
 
 #On met les config dans les dossier des sites disponnible
-COPY WEB/www/www.wt18.ephec-ti.be.conf /etc/apache2/sites-available
+COPY www/www.wt18.ephec-ti.be.conf /etc/apache2/sites-available
 
 #On créé un lien logic entre les config et le dossier sites-enabled
 RUN ln -s /etc/apache2/sites-available/www.wt18.ephec-ti.be.conf /etc/apache2/sites-enabled
@@ -12,7 +12,7 @@ RUN ln -s /etc/apache2/sites-available/www.wt18.ephec-ti.be.conf /etc/apache2/si
 RUN mkdir /var/www/www.wt18.ephec-ti.be
 
 #Copie le fichier html dans le fichier source racine
-COPY WEB/www/site/index.html /var/www/www.wt18.ephec-ti.be/index.html
+COPY www/site/index.html /var/www/www.wt18.ephec-ti.be/index.html
 
 EXPOSE 80 443
 
