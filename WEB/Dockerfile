@@ -1,29 +1,19 @@
-FROM ubuntu:16.04
+FROM ubuntu:latest
 
-ENV DEBIAN_FRONTEND=noninteractive
+RUN apt update && apt upgrade -y && DEBIAN_FRONTEND=noninteractive apt install -y apache2 php php-mysql vim
 
-RUN apt-get update && apt-get -y upgrade 
-RUN apt-get install -y apache2 
-RUN apt-get install -y php7.0 
-RUN apt-get install -y php7.0-mysql 
-RUN apt-get install -y libapache2-mod-php
-RUN apt-get install -y curl 
+#On met les config dans les dossier des sites disponnible
+COPY WEB/www/www.wt18.ephec-ti.be.conf /etc/apache2/sites-available
 
-ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/b2b/b2b.w18.ephec-ti.be.conf /etc/apache2/sites-available/b2b.w18.ephec-ti.be.conf
-ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/intranet/intranet.w18.ephec-ti.be.conf /etc/apache2/sites-available/intranet.w18.ephec-ti.be.conf
-ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/www/www.w18.ephec-ti.be.conf /etc/apache2/sites-available/www.w18.ephec-ti.be.conf
+#On créé un lien logic entre les config et le dossier sites-enabled
+RUN ln -s /etc/apache2/sites-available/www.wt18.ephec-ti.be.conf /etc/apache2/sites-enabled
 
-ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/b2b/site/index.php /var/www/b2b.w18.ephec-ti.be/index.php
-ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/intranet/site/index.html /var/www/intranet.w18.ephec-ti.be/index.html
-ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/WEB/www/site/index.html /var/www/www.w18.ephec-ti.be/index.html
+#On créé le dossier source racine pour notre site
+RUN mkdir /var/www/www.wt18.ephec-ti.be
 
-RUN a2enmod php7.0
-RUN a2enmod rewrite
-
-RUN ln -s /etc/apache2/sites-available/b2b.w18.ephec-ti.be.conf /etc/apache2/sites-enabled/
-RUN ln -s /etc/apache2/sites-available/intranet.w18.ephec-ti.be.conf /etc/apache2/sites-enabled/
-RUN ln -s /etc/apache2/sites-available/www.w18.ephec-ti.be.conf /etc/apache2/sites-enabled/
+#Copie le fichier html dans le fichier source racine
+COPY WEB/www/site/index.html /var/www/www.wt18.ephec-ti.be/index.html
 
 EXPOSE 80 443
 
-CMD ["apache2ctl", "-D", "FOREGROUND"]]
+CMD apachectl -DFOREGROUND
