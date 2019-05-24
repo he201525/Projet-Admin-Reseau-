@@ -19,8 +19,8 @@ RUN mkdir /var/www/intranet.wt18.ephec-ti.be
 
 #Copie le fichier html dans le fichier source racine
 COPY www/site/index.html /var/www/www.wt18.ephec-ti.be/index.html
-COPY b2b/site/index.html /var/www/www.wt18.ephec-ti.be/index.html
-COPY intranet/site/index.html /var/www/www.wt18.ephec-ti.be/index.html
+COPY b2b/site/index.html /var/www/b2b.wt18.ephec-ti.be/index.html
+COPY intranet/site/index.html /var/www/intranet.wt18.ephec-ti.be/index.html
 
 EXPOSE 80 443
 
