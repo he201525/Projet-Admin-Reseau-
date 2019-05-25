@@ -32,6 +32,11 @@ RUN mkdir /var/www/www.wt18.ephec-ti.be/js/effects
 RUN mkdir /var/www/www.wt18.ephec-ti.be/php
 
 RUN mkdir /var/www/b2b.wt18.ephec-ti.be
+RUN mkdir /var/www/b2b.wt18.ephec-ti.be/images/about-images
+RUN mkdir /var/www/b2b.wt18.ephec-ti.be/css
+RUN mkdir /var/www/b2b.wt18.ephec-ti.be/css/effects
+RUN mkdir /var/www/b2b.wt18.ephec-ti.be/js
+RUN mkdir /var/www/b2b.wt18.ephec-ti.be/js/effects
 
 RUN mkdir /var/www/intranet.wt18.ephec-ti.be
 
@@ -111,6 +116,37 @@ COPY www/site/js/nav.js /var/www/www.wt18.ephec-ti.be/js
 COPY www/site/php/contactform.php /var/www/www.wt18.ephec-ti.be/php
 
 COPY b2b/site/about.html /var/www/b2b.wt18.ephec-ti.be/about.html
+
+COPY b2b/site/images/favicon.ico /var/www/b2b.wt18.ephec-ti.be/images
+COPY b2b/site/images/logo.png /var/www/b2b.wt18.ephec-ti.be/images
+
+COPY b2b/site/images/about-images/about-image-1.jpg /var/www/b2b.wt18.ephec-ti.be/images/about-images
+COPY b2b/site/images/about-images/about-image-2.jpg /var/www/b2b.wt18.ephec-ti.be/images/about-images
+COPY b2b/site/images/about-images/about-image-3.jpg /var/www/b2b.wt18.ephec-ti.be/images/about-images
+
+COPY b2b/site/js/bootstrap.min.js /var/www/b2b.wt18.ephec-ti.be/js
+COPY b2b/site/js/custom.js /var/www/b2b.wt18.ephec-ti.be/js
+COPY b2b/site/js/html5shiv.js /var/www/b2b.wt18.ephec-ti.be/js
+COPY b2b/site/js/jquery.contact.js /var/www/b2b.wt18.ephec-ti.be/js
+COPY b2b/site/js/jquery.min.js /var/www/b2b.wt18.ephec-ti.be/js
+COPY b2b/site/js/maps.js /var/www/b2b.wt18.ephec-ti.be/js
+COPY b2b/site/js/nav.js /var/www/b2b.b2bwt18.ephec-ti.be/js
+
+COPY b2b/site/js/effects/AnimOnScroll.js /var/www/b2b.wt18.ephec-ti.be/js/effects
+COPY b2b/site/js/effects/classie.js /var/www/b2b.wt18.ephec-ti.be/js/effects
+COPY b2b/site/js/effects/imagesloaded.js /var/www/b2b.wt18.ephec-ti.be/js/effects
+COPY b2b/site/js/effects/masonry.pkgd.min.js /var/www/b2b.wt18.ephec-ti.be/js/effects
+COPY b2b/site/js/effects/modernizr.custom.js /var/www/b2b.wt18.ephec-ti.be/js/effects
+
+COPY b2b/site/css/effects/component.css /var/www/b2b.wt18.ephec-ti.be/css/effects
+COPY b2b/site/css/effects/normalize.css /var/www/b2b.wt18.ephec-ti.be/css/effects
+COPY b2b/site/css/effects/set2.css /var/www/b2b.wt18.ephec-ti.be/css/effects
+
+COPY b2b/site/css/bootstrap.min.css /var/www/b2b.wt18.ephec-ti.be/css
+COPY b2b/site/css/font-awesome.min.css /var/www/b2b.wt18.ephec-ti.be/css
+COPY b2b/site/css/responsive.css /var/www/b2b.wt18.ephec-ti.be/css
+COPY b2b/site/css/style.css /var/www/b2b.wt18.ephec-ti.be/css
+
 COPY intranet/site/index.html /var/www/intranet.wt18.ephec-ti.be/index.html
 
 EXPOSE 80 443
