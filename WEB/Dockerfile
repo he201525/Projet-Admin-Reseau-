@@ -14,11 +14,21 @@ RUN ln -s /etc/apache2/sites-available/intranet.wt18.ephec-ti.be.conf /etc/apach
 
 #On créé le dossier source racine pour notre site
 RUN mkdir /var/www/www.wt18.ephec-ti.be
+
 RUN mkdir /var/www/www.wt18.ephec-ti.be/css
 RUN mkdir /var/www/www.wt18.ephec-ti.be/css/effects
+
 RUN mkdir /var/www/www.wt18.ephec-ti.be/fonts
+
 RUN mkdir /var/www/www.wt18.ephec-ti.be/images
+RUN mkdir /var/www/www.wt18.ephec-ti.be/images/about-images
+RUN mkdir /var/www/www.wt18.ephec-ti.be/images/blog-images
+RUN mkdir /var/www/www.wt18.ephec-ti.be/images/home-images
+RUN mkdir /var/www/www.wt18.ephec-ti.be/images/work
+
 RUN mkdir /var/www/www.wt18.ephec-ti.be/js
+RUN mkdir /var/www/www.wt18.ephec-ti.be/js/effects
+
 RUN mkdir /var/www/www.wt18.ephec-ti.be/php
 
 RUN mkdir /var/www/b2b.wt18.ephec-ti.be
