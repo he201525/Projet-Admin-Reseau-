@@ -140,7 +140,6 @@ COPY b2b/site/css/responsive.css /var/www/b2b.wt18.ephec-ti.be/css
 COPY b2b/site/css/style.css /var/www/b2b.wt18.ephec-ti.be/css
 
 COPY intranet/site/blog.html /var/www/intranet.wt18.ephec-ti.be/blog.html
-COPY intranet/site/blog-details.html /var/www/intranet.wt18.ephec-ti.be/blog-details.html
 
 COPY intranet/site/images/blog-images/blog-1.jpg /var/www/intranet.wt18.ephec-ti.be/images/blog-images
 COPY intranet/site/images/blog-images/blog-2.jpg /var/www/intranet.wt18.ephec-ti.be/images/blog-images
