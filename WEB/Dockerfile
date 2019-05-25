@@ -117,6 +117,15 @@ COPY b2b/site/images/about-images/about-image-3.jpg /var/www/b2b.wt18.ephec-ti.b
 COPY b2b/site/images/favicon.ico /var/www/b2b.wt18.ephec-ti.be/images
 COPY b2b/site/images/logo.png /var/www/b2b.wt18.ephec-ti.be/images
 
+COPY b2b/site/css/effects/component.css /var/www/b2b.wt18.ephec-ti.be/css/effects
+COPY b2b/site/css/effects/normalize.css /var/www/b2b.wt18.ephec-ti.be/css/effects
+COPY b2b/site/css/effects/set2.css /var/www/b2b.wt18.ephec-ti.be/css/effects
+
+COPY b2b/site/css/bootstrap.min.css /var/www/b2b.wt18.ephec-ti.be/css
+COPY b2b/site/css/font-awesome.min.css /var/www/b2b.wt18.ephec-ti.be/css
+COPY b2b/site/css/responsive.css /var/www/b2b.wt18.ephec-ti.be/css
+COPY b2b/site/css/style.css /var/www/b2b.wt18.ephec-ti.be/css
+
 COPY intranet/site/index.html /var/www/intranet.wt18.ephec-ti.be/index.html
 
 EXPOSE 80 443
