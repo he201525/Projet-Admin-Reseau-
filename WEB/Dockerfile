@@ -14,11 +14,91 @@ RUN ln -s /etc/apache2/sites-available/intranet.wt18.ephec-ti.be.conf /etc/apach
 
 #On créé le dossier source racine pour notre site
 RUN mkdir /var/www/www.wt18.ephec-ti.be
+RUN mkdir /var/www/www.wt18.ephec-ti.be/css
+RUN mkdir /var/www/www.wt18.ephec-ti.be/css/effects
+RUN mkdir /var/www/www.wt18.ephec-ti.be/fonts
+RUN mkdir /var/www/www.wt18.ephec-ti.be/images
+RUN mkdir /var/www/www.wt18.ephec-ti.be/js
+RUN mkdir /var/www/www.wt18.ephec-ti.be/php
+
 RUN mkdir /var/www/b2b.wt18.ephec-ti.be
 RUN mkdir /var/www/intranet.wt18.ephec-ti.be
 
 #Copie le fichier html dans le fichier source racine
 COPY www/site/index.html /var/www/www.wt18.ephec-ti.be/index.html
+COPY www/site/blog-details.html /var/www/www.wt18.ephec-ti.be/blog-details.html
+COPY www/site/blog.html /var/www/www.wt18.ephec-ti.be/blog.html
+COPY www/site/contact.html /var/www/www.wt18.ephec-ti.be/contact.html
+COPY www/site/works-details.html /var/www/www.wt18.ephec-ti.be/works-details.html
+
+COPY www/site/css/effects/component.css /var/www/www.wt18.ephec-ti.be/css/effects
+COPY www/site/css/effects/normalize.css /var/www/www.wt18.ephec-ti.be/css/effects
+COPY www/site/css/effects/set2.css /var/www/www.wt18.ephec-ti.be/css/effects
+
+COPY www/site/css/bootstrap.min.css /var/www/www.wt18.ephec-ti.be/css
+COPY www/site/css/font-awesome.min.css /var/www/www.wt18.ephec-ti.be/css
+COPY www/site/css/responsive.css /var/www/www.wt18.ephec-ti.be/css
+COPY www/site/css/style.css /var/www/www.wt18.ephec-ti.be/css
+
+COPY www/site/images/about-images/about-image-1.jpg /var/www/www.wt18.ephec-ti.be/images/about-images
+COPY www/site/images/about-images/about-image-2.jpg /var/www/www.wt18.ephec-ti.be/images/about-images
+COPY www/site/images/about-images/about-image-3.jpg /var/www/www.wt18.ephec-ti.be/images/about-images
+
+COPY www/site/images/blog-images/blog-1.jpg /var/www/www.wt18.ephec-ti.be/images/blog-images
+COPY www/site/images/blog-images/blog-2.jpg /var/www/www.wt18.ephec-ti.be/images/blog-images
+COPY www/site/images/blog-images/blog-3.jpg /var/www/www.wt18.ephec-ti.be/images/blog-images
+COPY www/site/images/blog-images/blog-4.jpg /var/www/www.wt18.ephec-ti.be/images/blog-images
+COPY www/site/images/blog-images/blog-5.jpg /var/www/www.wt18.ephec-ti.be/images/blog-images
+COPY www/site/images/blog-images/blog-details-image.jpg /var/www/www.wt18.ephec-ti.be/images/blog-images
+COPY www/site/images/blog-images/image-1.jpg /var/www/www.wt18.ephec-ti.be/images/blog-images
+COPY www/site/images/blog-images/image-2.jpg /var/www/www.wt18.ephec-ti.be/images/blog-images
+COPY www/site/images/blog-images/image-3.jpg /var/www/www.wt18.ephec-ti.be/images/blog-images
+
+COPY www/site/images/home-images/image-1.jpg /var/www/www.wt18.ephec-ti.be/images/home-images
+COPY www/site/images/home-images/image-2.jpg /var/www/www.wt18.ephec-ti.be/images/home-images
+COPY www/site/images/home-images/image-3.jpg /var/www/www.wt18.ephec-ti.be/images/home-images
+COPY www/site/images/home-images/image-4.jpg /var/www/www.wt18.ephec-ti.be/images/home-images
+COPY www/site/images/home-images/image-5.jpg /var/www/www.wt18.ephec-ti.be/images/home-images
+COPY www/site/images/home-images/image-6.jpg /var/www/www.wt18.ephec-ti.be/images/home-images
+COPY www/site/images/home-images/image-7.jpg /var/www/www.wt18.ephec-ti.be/images/home-images
+COPY www/site/images/home-images/image-8.jpg /var/www/www.wt18.ephec-ti.be/images/home-images
+COPY www/site/images/home-images/image-9.jpg /var/www/www.wt18.ephec-ti.be/images/home-images
+
+COPY www/site/images/work/works-image-1.jpg /var/www/www.wt18.ephec-ti.be/images/work
+COPY www/site/images/work/works-image-2.jpg /var/www/www.wt18.ephec-ti.be/images/work
+COPY www/site/images/work/works-image-3.jpg /var/www/www.wt18.ephec-ti.be/images/work
+
+COPY www/site/images/favicon.ico /var/www/www.wt18.ephec-ti.be/images
+COPY www/site/images/logo.png /var/www/www.wt18.ephec-ti.be/images
+
+COPY www/site/js/effects/AnimOnScroll.js /var/www/www.wt18.ephec-ti.be/js/effects
+COPY www/site/js/effects/classie.js /var/www/www.wt18.ephec-ti.be/js/effects
+COPY www/site/js/effects/imagesloaded.js /var/www/www.wt18.ephec-ti.be/js/effects
+COPY www/site/js/effects/masonry.pkgd.min.js /var/www/www.wt18.ephec-ti.be/js/effects
+COPY www/site/js/effects/modernizr.custom.js /var/www/www.wt18.ephec-ti.be/js/effects
+
+COPY www/site/fonts/FontAwesome.otf /var/www/www.wt18.ephec-ti.be/fonts
+COPY www/site/fonts/fontawesome-webfont.eot /var/www/www.wt18.ephec-ti.be/fonts
+COPY www/site/fonts/fontawesome-webfont.svg /var/www/www.wt18.ephec-ti.be/fonts
+COPY www/site/fonts/fontawesome-webfont.ttf /var/www/www.wt18.ephec-ti.be/fonts
+COPY www/site/fonts/fontawesome-webfont.woff /var/www/www.wt18.ephec-ti.be/fonts
+COPY www/site/fonts/fontawesome-webfont.woff2 /var/www/www.wt18.ephec-ti.be/fonts
+COPY www/site/fonts/glyphicons-halflings-regular.eot /var/www/www.wt18.ephec-ti.be/fonts
+COPY www/site/fonts/glyphicons-halflings-regular.svg /var/www/www.wt18.ephec-ti.be/fonts
+COPY www/site/fonts/glyphicons-halflings-regular.ttf /var/www/www.wt18.ephec-ti.be/fonts
+COPY www/site/fonts/glyphicons-halflings-regular.woff /var/www/www.wt18.ephec-ti.be/fonts
+COPY www/site/fonts/glyphicons-halflings-regular.woff2 /var/www/www.wt18.ephec-ti.be/fonts
+
+COPY www/site/js/bootstrap.min.js /var/www/www.wt18.ephec-ti.be/js
+COPY www/site/js/custom.js /var/www/www.wt18.ephec-ti.be/js
+COPY www/site/js/html5shiv.js /var/www/www.wt18.ephec-ti.be/js
+COPY www/site/js/jquery.contact.js /var/www/www.wt18.ephec-ti.be/js
+COPY www/site/js/jquery.min.js /var/www/www.wt18.ephec-ti.be/js
+COPY www/site/js/maps.js /var/www/www.wt18.ephec-ti.be/js
+COPY www/site/js/nav.js /var/www/www.wt18.ephec-ti.be/js
+
+COPY www/site/php/contactform.php /var/www/www.wt18.ephec-ti.be/php
+
 COPY b2b/site/index.html /var/www/b2b.wt18.ephec-ti.be/index.html
 COPY intranet/site/index.html /var/www/intranet.wt18.ephec-ti.be/index.html
 
