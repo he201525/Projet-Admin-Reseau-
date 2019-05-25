@@ -41,8 +41,8 @@ RUN mkdir /var/www/b2b.wt18.ephec-ti.be/js/effects
 
 RUN mkdir /var/www/intranet.wt18.ephec-ti.be
 RUN mkdir /var/www/intranet.wt18.ephec-ti.be/css
+RUN mkdir /var/www/intranet.wt18.ephec-ti.be/images
 RUN mkdir /var/www/intranet.wt18.ephec-ti.be/images/blog-images
-RUN mkdir /var/www/intranet.wt18.ephec-ti.be/css
 
 #Copie le fichier html dans le fichier source racine
 COPY www/site/index.html /var/www/www.wt18.ephec-ti.be/index.html
@@ -151,6 +151,9 @@ COPY intranet/site/images/blog-images/blog-details-image.jpg /var/www/intranet.w
 COPY intranet/site/images/blog-images/image-1.jpg /var/www/intranet.wt18.ephec-ti.be/images/blog-images
 COPY intranet/site/images/blog-images/image-2.jpg /var/www/intranet.wt18.ephec-ti.be/images/blog-images
 COPY intranet/site/images/blog-images/image-3.jpg /var/www/intranet.wt18.ephec-ti.be/images/blog-images
+
+COPY intranet/site/images/favicon.ico /var/www/intranet.wt18.ephec-ti.be/images
+COPY intranet/site/images/logo.png /var/www/intranet.wt18.ephec-ti.be/images
 
 COPY intranet/site/css/style.css /var/www/intranet.wt18.ephec-ti.be/css
 
