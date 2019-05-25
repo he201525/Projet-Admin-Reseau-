@@ -126,6 +126,20 @@ COPY b2b/site/css/font-awesome.min.css /var/www/b2b.wt18.ephec-ti.be/css
 COPY b2b/site/css/responsive.css /var/www/b2b.wt18.ephec-ti.be/css
 COPY b2b/site/css/style.css /var/www/b2b.wt18.ephec-ti.be/css
 
+COPY b2b/site/js/effects/AnimOnScroll.js /var/www/www.wt18.ephec-ti.be/js/effects
+COPY b2b/site/js/effects/classie.js /var/www/www.wt18.ephec-ti.be/js/effects
+COPY b2b/site/js/effects/imagesloaded.js /var/www/www.wt18.ephec-ti.be/js/effects
+COPY b2b/site/js/effects/masonry.pkgd.min.js /var/www/www.wt18.ephec-ti.be/js/effects
+COPY b2b/site/js/effects/modernizr.custom.js /var/www/www.wt18.ephec-ti.be/js/effects
+
+COPY b2b/site/js/bootstrap.min.js /var/www/b2b.wt18.ephec-ti.be/js
+COPY b2b/site/js/custom.js /var/www/b2b.wt18.ephec-ti.be/js
+COPY b2b/site/js/html5shiv.js /var/www/b2b.wt18.ephec-ti.be/js
+COPY b2b/site/js/jquery.contact.js /var/www/b2b.wt18.ephec-ti.be/js
+COPY b2b/site/js/jquery.min.js /var/www/b2b.wt18.ephec-ti.be/js
+COPY b2b/site/js/maps.js /var/www/b2b.wt18.ephec-ti.be/js
+COPY b2b/site/js/nav.js /var/www/b2b.wt18.ephec-ti.be/js
+
 COPY intranet/site/index.html /var/www/intranet.wt18.ephec-ti.be/index.html
 
 EXPOSE 80 443
