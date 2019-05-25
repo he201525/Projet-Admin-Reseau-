@@ -40,11 +40,12 @@ RUN mkdir /var/www/b2b.wt18.ephec-ti.be/js
 RUN mkdir /var/www/b2b.wt18.ephec-ti.be/js/effects
 
 RUN mkdir /var/www/intranet.wt18.ephec-ti.be
+RUN mkdir /var/www/intranet.wt18.ephec-ti.be/css
+RUN mkdir /var/www/intranet.wt18.ephec-ti.be/images/blog-images
+RUN mkdir /var/www/intranet.wt18.ephec-ti.be/css
 
 #Copie le fichier html dans le fichier source racine
 COPY www/site/index.html /var/www/www.wt18.ephec-ti.be/index.html
-COPY www/site/blog-details.html /var/www/www.wt18.ephec-ti.be/blog-details.html
-COPY www/site/blog.html /var/www/www.wt18.ephec-ti.be/blog.html
 COPY www/site/contact.html /var/www/www.wt18.ephec-ti.be/contact.html
 COPY www/site/works-details.html /var/www/www.wt18.ephec-ti.be/works-details.html
 
@@ -60,16 +61,6 @@ COPY www/site/css/style.css /var/www/www.wt18.ephec-ti.be/css
 COPY www/site/images/about-images/about-image-1.jpg /var/www/www.wt18.ephec-ti.be/images/about-images
 COPY www/site/images/about-images/about-image-2.jpg /var/www/www.wt18.ephec-ti.be/images/about-images
 COPY www/site/images/about-images/about-image-3.jpg /var/www/www.wt18.ephec-ti.be/images/about-images
-
-COPY www/site/images/blog-images/blog-1.jpg /var/www/www.wt18.ephec-ti.be/images/blog-images
-COPY www/site/images/blog-images/blog-2.jpg /var/www/www.wt18.ephec-ti.be/images/blog-images
-COPY www/site/images/blog-images/blog-3.jpg /var/www/www.wt18.ephec-ti.be/images/blog-images
-COPY www/site/images/blog-images/blog-4.jpg /var/www/www.wt18.ephec-ti.be/images/blog-images
-COPY www/site/images/blog-images/blog-5.jpg /var/www/www.wt18.ephec-ti.be/images/blog-images
-COPY www/site/images/blog-images/blog-details-image.jpg /var/www/www.wt18.ephec-ti.be/images/blog-images
-COPY www/site/images/blog-images/image-1.jpg /var/www/www.wt18.ephec-ti.be/images/blog-images
-COPY www/site/images/blog-images/image-2.jpg /var/www/www.wt18.ephec-ti.be/images/blog-images
-COPY www/site/images/blog-images/image-3.jpg /var/www/www.wt18.ephec-ti.be/images/blog-images
 
 COPY www/site/images/home-images/image-1.jpg /var/www/www.wt18.ephec-ti.be/images/home-images
 COPY www/site/images/home-images/image-2.jpg /var/www/www.wt18.ephec-ti.be/images/home-images
@@ -148,7 +139,20 @@ COPY b2b/site/css/font-awesome.min.css /var/www/b2b.wt18.ephec-ti.be/css
 COPY b2b/site/css/responsive.css /var/www/b2b.wt18.ephec-ti.be/css
 COPY b2b/site/css/style.css /var/www/b2b.wt18.ephec-ti.be/css
 
-COPY intranet/site/index.html /var/www/intranet.wt18.ephec-ti.be/index.html
+COPY intranet/site/index.html /var/www/intranet.wt18.ephec-ti.be/blog.html
+COPY intranet/site/index.html /var/www/intranet.wt18.ephec-ti.be/blog-details.html
+
+COPY intranet/site/images/blog-images/blog-1.jpg /var/www/intranet.wt18.ephec-ti.be/images/blog-images
+COPY intranet/site/images/blog-images/blog-2.jpg /var/www/intranet.wt18.ephec-ti.be/images/blog-images
+COPY intranet/site/images/blog-images/blog-3.jpg /var/www/intranet.wt18.ephec-ti.be/images/blog-images
+COPY intranet/site/images/blog-images/blog-4.jpg /var/www/intranet.wt18.ephec-ti.be/images/blog-images
+COPY intranet/site/images/blog-images/blog-5.jpg /var/www/intranet.wt18.ephec-ti.be/images/blog-images
+COPY intranet/site/images/blog-images/blog-details-image.jpg /var/www/intranet.wt18.ephec-ti.be/images/blog-images
+COPY intranet/site/images/blog-images/image-1.jpg /var/www/intranet.wt18.ephec-ti.be/images/blog-images
+COPY intranet/site/images/blog-images/image-2.jpg /var/www/intranet.wt18.ephec-ti.be/images/blog-images
+COPY intranet/site/images/blog-images/image-3.jpg /var/www/intranet.wt18.ephec-ti.be/images/blog-images
+
+COPY intranet/site/css/style.css /var/www/intranet.wt18.ephec-ti.be/css
 
 EXPOSE 80 443
 
