@@ -109,7 +109,8 @@ COPY www/site/js/nav.js /var/www/www.wt18.ephec-ti.be/js
 
 COPY www/site/php/contactform.php /var/www/www.wt18.ephec-ti.be/php
 
-COPY b2b/site/index.html /var/www/b2b.wt18.ephec-ti.be/index.html
+COPY b2b/site/about.html /var/www/b2b.wt18.ephec-ti.be/about.html
+
 COPY intranet/site/index.html /var/www/intranet.wt18.ephec-ti.be/index.html
 
 EXPOSE 80 443
