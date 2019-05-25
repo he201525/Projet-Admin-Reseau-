@@ -32,7 +32,7 @@ RUN mkdir /var/www/www.wt18.ephec-ti.be/js/effects
 RUN mkdir /var/www/www.wt18.ephec-ti.be/php
 
 RUN mkdir /var/www/b2b.wt18.ephec-ti.be
-RUN mkdir /var/www/www.wt18.ephec-ti.be/images
+RUN mkdir /var/www/b2b.wt18.ephec-ti.be/images
 RUN mkdir /var/www/b2b.wt18.ephec-ti.be/images/about-images
 RUN mkdir /var/www/b2b.wt18.ephec-ti.be/css
 RUN mkdir /var/www/b2b.wt18.ephec-ti.be/css/effects
