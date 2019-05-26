@@ -1,4 +1,4 @@
-FROM debian
+FROM ubuntu:16.04
 
 #téléchargement des ressources nécessaire
 RUN apt-get update && apt-get upgrade && DEBIAN_FRONTEND=noninteractive
