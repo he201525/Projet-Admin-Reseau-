@@ -5,7 +5,6 @@ RUN apt-get update && apt-get upgrade && DEBIAN_FRONTEND=noninteractive
 RUN apt-get install -y build-essential 
 RUN apt-get install -y libxml2-dev 
 RUN apt-get install -y libncurses5-dev 
-RUN apt-get install -y linux-headers-$(uname -r) 
 RUN apt-get install -y libsqlite3-dev 
 RUN apt-get install -y libssl-dev
 RUN apt-get install -y vim
