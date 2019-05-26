@@ -22,9 +22,9 @@ RUN mkdir /usr/src/asterisk
 RUN cd /usr/src/asterisk
 
 #télécharge la derniere version astersk
-RUN apt-get install -y wget http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-15-current.tar.gz
-RUN apt-get install -y tar -xzf asterisk-15-current.tar.gz
-RUN apt-get install -y cd asterik-asterisk-15
+RUN apt-get install -y wget http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-16-current.tar.gz
+RUN apt-get install -y tar -xvzf asterisk-16-current.tar.gz
+RUN apt-get install -y cd asterisk-16.0.1
 RUN apt-get install -y ./configure
 RUN apt-get install -y make menuselect
 
