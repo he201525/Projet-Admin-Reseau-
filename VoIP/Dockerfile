@@ -13,9 +13,9 @@ RUN apt-get install -y vim
 RUN mkdir /usr/src/asterisk
 
 #télécharge la derniere version astersk
-RUN wget https://downloads.asterisk.org/pub/telephony/asterisk/asterisk-14.4.0.tar.gz
-RUN tar -xzf asterisk-14.4.0.tar.gz
-RUN cd asterik-asterisk-14.4.0
+RUN wget http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-16-current.tar.gz
+RUN tar -xzf asterisk-16-current.tar.gz
+RUN cd asterik-asterisk-16
 RUN ./configure
 RUN make menuselect
 
