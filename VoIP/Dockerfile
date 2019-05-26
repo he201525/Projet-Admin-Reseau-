@@ -17,10 +17,9 @@ RUN apt-get install -y libsqlite3-dev
 RUN apt-get install -y libssl-dev
 RUN apt-get install -y vim
 
-WORKDIR /usr/local/src/
-
 #On créer un dossier ou nous allons placer les sources d’Asterisk
 RUN mkdir /usr/src/asterisk
+RUN cd /usr/src/asterisk
 
 #télécharge la derniere version astersk
 RUN apt-get install -y wget http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-15-current.tar.gz
