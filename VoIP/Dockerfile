@@ -2,9 +2,17 @@ FROM debian
 
 #téléchargement des ressources nécessaire
 RUN apt-get update && apt-get upgrade && DEBIAN_FRONTEND=noninteractive
-RUN apt-get install -y build-essential 
+RUN apt-get install -y build-essential
+RUN apt-get install -y git-core
+RUN apt-get install -y subversion
+RUN apt-get install -y libjansson-dev
+RUN apt-get install -y sqlite
+RUN apt-get install -y autoconf 
+RUN apt-get install -y automake
+RUN apt-get install -y libtool
 RUN apt-get install -y libxml2-dev 
 RUN apt-get install -y libncurses5-dev 
+RUN apt-get install -y linux-headers-`uname -r`
 RUN apt-get install -y libsqlite3-dev 
 RUN apt-get install -y libssl-dev
 RUN apt-get install -y vim
