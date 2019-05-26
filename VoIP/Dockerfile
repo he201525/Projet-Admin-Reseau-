@@ -24,3 +24,11 @@ ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/VoIP/
 ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/VoIP/config/sip.conf /etc/bind/db.wt18.ephec-ti.be
 ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/VoIP/config/users.conf /etc/bind/db.wt18.ephec-ti.be
 ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/VoIP/config/voicemail.conf /etc/bind/db.wt18.ephec-ti.be
+
+VOLUME /etc/asterisk
+
+EXPOSE 5060/udp
+EXPOSE 5060/tcp
+EXPOSE 4569/udp
+
+CMD ["asterisk", "-f"]
