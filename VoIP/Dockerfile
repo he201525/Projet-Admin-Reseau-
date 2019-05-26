@@ -1,7 +1,8 @@
 FROM debian
 
 #téléchargement des ressources nécessaire
-RUN apt-get update && apt-get upgrade && DEBIAN_FRONTEND=noninteractive
+RUN apt-get -y update
+RUN apt-get -y upgrade
 RUN apt-get install -y build-essential
 RUN apt-get install -y git-core
 RUN apt-get install -y subversion
