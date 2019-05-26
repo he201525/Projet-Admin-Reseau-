@@ -20,11 +20,11 @@ RUN apt-get install -y vim
 RUN mkdir /usr/src/asterisk
 
 #télécharge la derniere version astersk
-RUN yum install -y wget http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-15-current.tar.gz
-RUN apt-get install tar -xzf asterisk-15-current.tar.gz
-RUN apt-get install cd asterik-asterisk-15
-RUN apt-get install ./configure
-RUN apt-get install make menuselect
+RUN apt-get install -y wget http://downloads.asterisk.org/pub/telephony/asterisk/asterisk-15-current.tar.gz
+RUN apt-get install -y tar -xzf asterisk-15-current.tar.gz
+RUN apt-get install -y cd asterik-asterisk-15
+RUN apt-get install -y ./configure
+RUN apt-get install -y make menuselect
 
 RUN make
 RUN make install
