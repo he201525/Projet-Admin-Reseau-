@@ -2,7 +2,7 @@ FROM debian
 
 #téléchargement des ressources nécessaire
 RUN apt-get update && apt-get upgrade && DEBIAN_FRONTEND=noninteractive
-RUN apt-get install build-essential libxml2-dev libncurses5-dev linux-headers-`uname -r` libsqlite3-dev libssl-dev
+RUN apt-get install build-essential libxml2-dev libncurses5-dev linux-headers-$(uname -r) libsqlite3-dev libssl-dev
 RUN apt-get install -y vim
 
 #On créer un dossier ou nous allons placer les sources d’Asterisk
