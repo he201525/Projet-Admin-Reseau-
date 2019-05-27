@@ -19,5 +19,5 @@ intranet.wt18.ephec-ti.be. IN      A       51.77.245.41
 wt18.ephec-ti.be.          IN     MX   5   mail.wt18.ephec-ti.be.
 mail.wt18.ephec-ti.be.     IN      A       51.77.245.41
 
+_sip._udp                  IN      SRV     0      0      5060 sip
 sip                        IN      A       51.77.245.41
-_sip._udp                  IN      SRV 0 0 5060 sip
