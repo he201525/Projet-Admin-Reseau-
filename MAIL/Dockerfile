@@ -8,6 +8,7 @@ RUN apt-get install -y dovecot-common
 RUN apt-get install -y dovecot-imapd
 RUN apt-get install -y dovecot-pop3d
 RUN apt-get install -y mailutils
+RUN apt-get install -y vim
 
 ADD https://github.com/he201525/Projet-Admin-Reseau-/blob/master/MAIL/postfix/master.cf /etc/postfix/master.cf
 ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/MAIL/postfix/main.cf /etc/postfix/main.cf
