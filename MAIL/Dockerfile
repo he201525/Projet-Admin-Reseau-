@@ -19,7 +19,7 @@ ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/MAIL/
 ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/MAIL/dovecot/10-mail.conf /etc/dovecot/conf.d/10-mail.conf
 ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/MAIL/dovecot/10-ssl.conf /etc/dovecot/conf.d/10-ssl.conf
 
-ADD start.sh /start.sh
+ADD https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/MAIL/start.sh /start.sh
 RUN chmod -R 777 /start.sh
 
 RUN postalias /etc/aliases
