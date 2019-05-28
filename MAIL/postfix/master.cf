@@ -31,4 +31,4 @@ enclume unix - - n - 1 enclume
 scache unix - - n - 1 scache
 
 dovecot unix - n n - - pipe
-    flags = utilisateur = vmail: vmail argv = / usr / libexec / dovecot / deliver -f $ {expéditeur} -d $ {destinataire}
+    flags = utilisateur = vmail: vmail argv = / usr / libexec / dovecot / deliver -f $ {expediteur} -d $ {destinataire}
