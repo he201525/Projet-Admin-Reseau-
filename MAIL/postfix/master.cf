@@ -14,27 +14,28 @@ smtp      inet  n       -       -       -       -       smtpd
 #smtpd     pass  -       -       -       -       -       smtpd
 #dnsblog   unix  -       -       -       -       0       dnsblog
 #tlsproxy  unix  -       -       -       -       0       tlsproxy
-submission inet n       -       n       -       -       smtpd
+submission inet n       -       -       -       -       smtpd
   -o syslog_name=postfix/submission
   -o smtpd_tls_security_level=encrypt
   -o smtpd_sasl_auth_enable=yes
+  -o smtpd_client_restrictions=permit_sasl_authenticated,reject
 #  -o smtpd_reject_unlisted_recipient=no
 #  -o smtpd_client_restrictions=$mua_client_restrictions
-#  -o smtpd_client_restrictions=permit_sasl_authenticated,reject
 #  -o smtpd_helo_restrictions=$mua_helo_restrictions
 #  -o smtpd_sender_restrictions=$mua_sender_restrictions
-#  -o smtpd_recipient_restrictions=reject_sender_login_mismatch
+#  -o smtpd_recipient_restrictions=
 #  -o smtpd_relay_restrictions=permit_sasl_authenticated,reject
 #  -o milter_macro_daemon_name=ORIGINATING
-#smtps     inet  n       -       -       -       -       smtpd
-#  -o syslog_name=postfix/smtps
-#  -o smtpd_tls_wrappermode=yes
-#  -o smtpd_sasl_auth_enable=yes
+smtps     inet  n       -       -       -       -       smtpd
+  -o syslog_name=postfix/smtps
+  -o smtpd_tls_wrappermode=yes
+  -o smtpd_sasl_auth_enable=yes
+  -o smtpd_client_restrictions=permit_sasl_authenticated,reject
 #  -o smtpd_reject_unlisted_recipient=no
 #  -o smtpd_client_restrictions=$mua_client_restrictions
 #  -o smtpd_helo_restrictions=$mua_helo_restrictions
 #  -o smtpd_sender_restrictions=$mua_sender_restrictions
-  -o smtpd_recipient_restrictions=reject_non_fqdn_recipient,reject_unknown_recipient_domain,permit_sasl_authenticated,reject
+#  -o smtpd_recipient_restrictions=
 #  -o smtpd_relay_restrictions=permit_sasl_authenticated,reject
 #  -o milter_macro_daemon_name=ORIGINATING
 #628       inet  n       -       -       -       -       qmqpd
@@ -77,7 +78,7 @@ scache    unix  -       -       -       -       1       scache
 # Also specify in main.cf: maildrop_destination_recipient_limit=1
 #
 maildrop  unix  -       n       n       -       -       pipe
-  flags=DRhu user=vmail argv=/usr/bin/maildrop -d ${recipient}
+  flags=DRhu user=vmail argv=/usr/bin/maildrop -d vmail ${extension} ${recipient} ${user} ${nexthop} ${sender}
 #
 # ====================================================================
 #
@@ -117,8 +118,27 @@ ifmail    unix  -       n       n       -       -       pipe
   flags=F user=ftn argv=/usr/lib/ifmail/ifmail -r $nexthop ($recipient)
 bsmtp     unix  -       n       n       -       -       pipe
   flags=Fq. user=bsmtp argv=/usr/lib/bsmtp/bsmtp -t$nexthop -f$sender $recipient
-scalemail-backend unix	-	n	n	-	2	pipe
+scalemail-backend unix  -       n       n       -       2       pipe
   flags=R user=scalemail argv=/usr/lib/scalemail/bin/scalemail-store ${nexthop} ${user} ${extension}
 mailman   unix  -       n       n       -       -       pipe
   flags=FR user=list argv=/usr/lib/mailman/bin/postfix-to-mailman.py
   ${nexthop} ${user}
+
+dovecot   unix  -       n       n       -       -       pipe
+  flags=DROhu user=vmail:vmail argv=/usr/lib/dovecot/deliver -f ${sender} -d ${user}@${nexthop}
+amavis unix - - - - 2 smtp
+        -o smtp_data_done_timeout=1200
+        -o smtp_send_xforward_command=yes
+
+127.0.0.1:10025 inet n - - - - smtpd
+        -o content_filter=
+        -o local_recipient_maps=
+        -o relay_recipient_maps=
+        -o smtpd_restriction_classes=
+        -o smtpd_client_restrictions=
+        -o smtpd_helo_restrictions=
+        -o smtpd_sender_restrictions=
+        -o smtpd_recipient_restrictions=permit_mynetworks,reject
+        -o mynetworks=127.0.0.0/8
+        -o strict_rfc821_envelopes=yes
+        -o receive_override_options=no_unknown_recipient_checks,no_header_body_checks
