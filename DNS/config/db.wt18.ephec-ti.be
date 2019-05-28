@@ -16,8 +16,11 @@ www.wt18.ephec-ti.be.      IN      A       51.77.245.41
 b2b.wt18.ephec-ti.be.      IN      A       51.77.245.41
 intranet.wt18.ephec-ti.be. IN      A       51.77.245.41
 
-wt18.ephec-ti.be.          IN     MX   5   mail.wt18.ephec-ti.be.
-mail.wt18.ephec-ti.be.     IN      A       51.77.245.41
+mail		                   IN	     A	     51.77.245.41
+@		                       IN	     MX	 10	 mail
+smtp		                   IN	     CNAME	 mail
+pop3		                   IN	     CNAME	 mail
+imap		                   IN	     CNAME	 mail
 
 _sip._udp                  IN      SRV     0      0      5060 sip
 sip                        IN      A       51.77.245.41
