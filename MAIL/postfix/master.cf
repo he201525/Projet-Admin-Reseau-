@@ -30,5 +30,5 @@ lmtp unix - - n - - lmtp
 enclume unix - - n - 1 enclume
 scache unix - - n - 1 scache
 
-dovecot unix - nn - - pipe
+dovecot unix - n n - - pipe
     flags = utilisateur = vmail: vmail argv = / usr / libexec / dovecot / deliver -f $ {expéditeur} -d $ {destinataire}
