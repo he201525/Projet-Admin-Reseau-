@@ -24,8 +24,8 @@ showq unix n - n - - showq
 erreur unix - - n - - error
 retry unix - - n - - error
 jeter unix - - n - - jeter
-local unix - nn - - local
-#virtual unix - nn - - virtuel
+local unix - n n - - local
+#virtual unix - n n - - virtuel
 lmtp unix - - n - - lmtp
 enclume unix - - n - 1 enclume
 scache unix - - n - 1 scache
