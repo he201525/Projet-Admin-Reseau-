@@ -10,17 +10,17 @@ RUN apt-get install -y dovecot-pop3d
 RUN apt-get install -y mailutils
 RUN apt-get install -y vim
 
-COPY https://github.com/he201525/Projet-Admin-Reseau-/blob/master/MAIL/postfix/master.cf /etc/postfix/master.cf
-COPY https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/MAIL/postfix/main.cf /etc/postfix/main.cf
-COPY https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/MAIL/postfix/aliases /etc/aliases
+COPY postfix/master.cf /etc/postfix/master.cf
+COPY postfix/main.cf /etc/postfix/main.cf
+COPY postfix/aliases /etc/aliases
 
-COPY https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/MAIL/dovecot/dovecot.conf /etc/dovecot/dovecot.conf
-COPY https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/MAIL/dovecot/10-master.conf /etc/dovecot/conf.d/10-master.conf
-COPY https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/MAIL/dovecot/10-auth.conf /etc/dovecot/conf.d/10-auth.conf
-COPY https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/MAIL/dovecot/10-mail.conf /etc/dovecot/conf.d/10-mail.conf
-COPY https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/MAIL/dovecot/10-ssl.conf /etc/dovecot/conf.d/10-ssl.conf
+COPY dovecot/dovecot.conf /etc/dovecot/dovecot.conf
+COPY dovecot/10-master.conf /etc/dovecot/conf.d/10-master.conf
+COPY dovecot/10-auth.conf /etc/dovecot/conf.d/10-auth.conf
+COPY dovecot/10-mail.conf /etc/dovecot/conf.d/10-mail.conf
+COPY dovecot/10-ssl.conf /etc/dovecot/conf.d/10-ssl.conf
 
-COPY https://raw.githubusercontent.com/he201525/Projet-Admin-Reseau-/master/MAIL/start.sh /start.sh
+COPY start.sh /start.sh
 RUN chmod -R 777 /start.sh
 
 RUN postalias /etc/aliases
