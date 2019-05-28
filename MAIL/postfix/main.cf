@@ -17,3 +17,4 @@ recipient_delimiter = +
 inet_interfaces = all
 alias_maps = hash:/etc/aliases
 alias_database = hash:/etc/aliases
+compatibility_level=2
