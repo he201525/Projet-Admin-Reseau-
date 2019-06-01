@@ -8,7 +8,7 @@ Le client souhaite remplacer son infrastructure vieillissante en la délocalisan
 
 # Etapes du projet<br>
   
- unchecked # Mission 1: Web & DNS (Responsable : Zita Almasy) <br>
- unchecked# Mission 2: Mail (Responsable : Célia) <br>
- unchecked# Mission 3: Voip (Responsable : Aymeric Ponjee)<br>
- unchecked# Présentation Orale - 6 juin 2019 <br>
+ Mission 1: Web & DNS (Responsable : Zita Almasy) <br>
+ Mission 2: Mail (Responsable : Célia) <br>
+ Mission 3: Voip (Responsable : Aymeric Ponjee)<br>
+ Présentation Orale - 6 juin 2019 <br>
