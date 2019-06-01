@@ -6,8 +6,8 @@ WoodyToys possède un ERP (Entreprise Ressource Planning) interne uniquement acc
 
 Le client souhaite remplacer son infrastructure vieillissante en la délocalisant chez un consultant informatique. Nous avons été contacter pour la phase de conception et de validation de ce projet. <br>
 
-# Etapes du projet
- <square> Mission 1: Web & DNS (Responsable : Zita Almasy)
- <square> Mission 2: Mail (Responsable : Célia)
- <square> Mission 3: Voip (Responsable : Aymeric Ponjee)
- <square> Présentation Orale - 6 juin 2019
+# Etapes du projet<br>
+ <square> Mission 1: Web & DNS (Responsable : Zita Almasy) <br>
+ <square> Mission 2: Mail (Responsable : Célia) <br>
+ <square> Mission 3: Voip (Responsable : Aymeric Ponjee)<br>
+ <square> Présentation Orale - 6 juin 2019 <br>
