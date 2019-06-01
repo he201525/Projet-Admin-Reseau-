@@ -107,7 +107,7 @@ COPY www/site/js/nav.js /var/www/www.wt18.ephec-ti.be/js
 
 COPY www/site/php/contactform.php /var/www/www.wt18.ephec-ti.be/php
 
-COPY b2b/site/about.html /var/www/b2b.wt18.ephec-ti.be/about.html
+COPY b2b/site/about.html /var/www/b2b.wt18.ephec-ti.be/index.html
 
 COPY b2b/site/images/favicon.ico /var/www/b2b.wt18.ephec-ti.be/images
 COPY b2b/site/images/logo.png /var/www/b2b.wt18.ephec-ti.be/images
@@ -139,7 +139,7 @@ COPY b2b/site/css/font-awesome.min.css /var/www/b2b.wt18.ephec-ti.be/css
 COPY b2b/site/css/responsive.css /var/www/b2b.wt18.ephec-ti.be/css
 COPY b2b/site/css/style.css /var/www/b2b.wt18.ephec-ti.be/css
 
-COPY intranet/site/blog.html /var/www/intranet.wt18.ephec-ti.be/blog.html
+COPY intranet/site/blog.html /var/www/intranet.wt18.ephec-ti.be/index.html
 
 COPY intranet/site/images/blog-images/blog-2.jpg /var/www/intranet.wt18.ephec-ti.be/images/blog-images
 
